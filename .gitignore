@@ -35,7 +35,7 @@ forge*changelog.txt
 #vscode
 .vscode
 
-libs/*.jar
+#libs/*.jar
 
 # Don't ignore bin from scripts
 !/src/main/scripts/bin/

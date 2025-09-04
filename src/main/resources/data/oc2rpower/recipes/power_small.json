@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ITI",
+    "EBE",
+    "ITI"
+  ],
+  "key": {
+    "I": {
+      "tag": "forge:storage_blocks/redstone"
+    },
+    "T": {
+      "item": "oc2r:transistor"
+    },
+    "B": {
+      "item": "oc2r:circuit_board"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "oc2rpower:battery_small"
+  }
+}

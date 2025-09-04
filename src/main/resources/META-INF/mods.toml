@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/therealm18/oc2rcore/issues"
+license = "MIT"
+
+[[mods]]
+modId = "oc2rcore"
+version = "${file.jarVersion}"
+displayName = "OC2R: Addon Core"
+authors = "The Realm 18 Studios"
+description = '''
+OC2R: Addon Core a global Creative Tab Library.
+'''
+
+[[dependencies.oc2rcore]]
+modId = "forge"
+mandatory = true
+versionRange = "[40.4.0,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.oc2rcore]]
+modId = "minecraft"
+mandatory = true
+versionRange = "1.20.1"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.oc2rcore]]
+modId = "oc2r"
+mandatory = true
+versionRange = "[2.2.4,)"
+side = "BOTH"
+ordering = "AFTER"

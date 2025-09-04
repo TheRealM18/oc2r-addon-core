@@ -1,0 +1,10 @@
+{
+  "item_group.oc2rpower.common": "OC2R Power",
+
+  "manual.oc2rpower.items": "OC2R Power",
+
+  "item.oc2rpower.battery_small": "10k battery",
+  "item.oc2rpower.battery_medium": "50k battery",
+  "item.oc2rpower.battery_large": "250k battery",
+  "item.oc2rpower.battery_extra_large": "1M battery"
+}

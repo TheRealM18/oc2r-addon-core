@@ -24,7 +24,7 @@ static def getGitRef() {
 }
 
 version = System.getenv('RELEASE_TYPE') == "release" ? "${semver}" : "${semver}+${getGitRef()}"
-group = "com.therealm18studios.oc2c"
+group = "com.therealm18studios.oc2rcore"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 

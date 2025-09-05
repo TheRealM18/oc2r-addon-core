@@ -18,6 +18,8 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - name: Fix Permissions
+        run: chmod +x gradlew
       - name: Set release type to 'release'
         run: |
           echo "RELEASE_TYPE=release" >> $GITHUB_ENV

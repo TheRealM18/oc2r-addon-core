@@ -11,7 +11,7 @@ public final class OC2RCore {
     public static String MOD_ID = "oc2rcore";
 
     public OC2RCore() {
-        Global.initialize();
+        Global.initialize(FMLJavaModLoadingContext.get());
         ItemGroup.TAB_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

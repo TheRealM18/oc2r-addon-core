@@ -42,11 +42,29 @@ public final class Manuals {
         }
 
 
-        // OC2R Power Components
+        // OC2R Library Functions
         if (Platform.isModLoaded(OC2RLibraryItems.MOD_ID)) {
             TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
-                ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "/index.md",
-                Component.translatable("manual." + OC2RLibraryItems.MOD_ID + ".items"),
+                ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-functions/index.md",
+                Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-functions.items"),
+                new ItemStack(Items.BOOK)));
+        }
+
+
+        // OC2R Library Programming
+        if (Platform.isModLoaded(OC2RLibraryItems.MOD_ID)) {
+            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
+                ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-programming/index.md",
+                Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-programming.items"),
+                new ItemStack(Items.BOOK)));
+        }
+
+
+        // OC2R Library Tutorial
+        if (Platform.isModLoaded(OC2RLibraryItems.MOD_ID)) {
+            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
+                ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-tutorial/index.md",
+                Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-tutorial.items"),
                 new ItemStack(Items.BOOK)));
         }
 

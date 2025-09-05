@@ -1,9 +1,7 @@
 package com.therealm18studios.oc2rcore.common.item;
 
 import com.therealm18studios.oc2rcore.OC2RCore;
-import com.therealm18studios.oc2rcore.compat.items.OC2RCItems;
-import com.therealm18studios.oc2rcore.compat.items.OC2RPowerItems;
-import com.therealm18studios.oc2rcore.compat.items.OC2RVSItems;
+import com.therealm18studios.oc2rcore.compat.items.*;
 import dev.architectury.platform.Platform;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -65,8 +63,15 @@ public final class ItemGroup {
             // OC2R Valkyrie Skies
             if (Platform.isModLoaded("oc2rvs")) {
 
-                // Battery Items
+                // Circuit Items
                 output.accept(OC2RVSItems.SHIP_OPERATIONS_MODULE);
+            }
+
+            // OC2R DamOS Item
+            if (Platform.isModLoaded("oc2rdamos")) {
+
+                // OS Item
+                output.accept(OC2RDamOSItems.DAMOS);
             }
         })
         .build()

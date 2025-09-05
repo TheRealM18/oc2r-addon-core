@@ -18,8 +18,6 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Fix Permissions
-        run: chmod +x gradlew
       - name: Set release type to 'release'
         run: |
           echo "RELEASE_TYPE=release" >> $GITHUB_ENV
@@ -30,6 +28,10 @@ jobs:
         if: github.event.release.prerelease == true
 
       - uses: actions/checkout@v4
+      
+      - name: Fix Permissions
+        run: chmod +x gradlew
+      
       - name: Publish to Curseforge & Modrinth
         run: ./gradlew -Psemver='${{ github.event.release.tag_name }}' publish
         env:

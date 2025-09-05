@@ -156,7 +156,7 @@ jar {
 
     manifest {
         attributes([
-            "Specification-Title"     : "oc2rcore",
+            "Specification-Title"     : "oc2r-addon-core",
             "Specification-Vendor"    : "TheRealM18",
             "Specification-Version"   : "1",
             "Implementation-Title"    : project.name,
@@ -194,7 +194,7 @@ curseforge {
         addGameVersion getCurseforgeSDKValue(minecraft_sdk)
         addGameVersion minecraft_version
         addGameVersion "Java 17"
-        mainArtifact "build/libs/oc2rcore-${minecraft_version}-${minecraft_sdk}-${version}-all.jar"
+        mainArtifact "build/libs/oc2r-addon-core-${minecraft_version}-${minecraft_sdk}-${version}-all.jar"
         relations {
             requiredDependency "architectury-api"
             requiredDependency "markdownmanual"
@@ -207,7 +207,7 @@ curseforge {
 //    token = System.getenv("MODRINTH_TOKEN")
 //    projectId = modrinth_project_id
 //    versionType = System.getenv('RELEASE_TYPE') ?: "alpha"
-//    uploadFile = "build/libs/oc2rcore-${minecraft_version}-${minecraft_sdk}-${version}-all.jar"
+//    uploadFile = "build/libs/oc2r-addon-core-${minecraft_version}-${minecraft_sdk}-${version}-all.jar"
 //    gameVersions = [minecraft_version]
 //    loaders = [minecraft_sdk]
 //    changelog = System.getenv("CHANGELOG") ?: "Changelog not available."

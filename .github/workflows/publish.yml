@@ -28,13 +28,14 @@ jobs:
         if: github.event.release.prerelease == true
 
       - uses: actions/checkout@v4
-      - name: Fix Windows
-        run: |
-          chmod +x gradlew
+      
+      - name: Fix Permissions
+        run: chmod +x gradlew
+      
       - name: Publish to Curseforge & Modrinth
         run: ./gradlew -Psemver='${{ github.event.release.tag_name }}' publish
         env:
-#          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          # MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
           RELEASE_TYPE: ${{ env.RELEASE_TYPE }}
           CHANGELOG: ${{ github.event.release.body }}

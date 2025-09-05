@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "oc2rpower:battery_small",
-    "oc2rpower:battery_medium",
-    "oc2rpower:battery_large",
-    "oc2rpower:battery_extra_large"
-  ]
-}

@@ -30,3 +30,33 @@ mandatory = true
 versionRange = "[2.2.4,)"
 side = "BOTH"
 ordering = "AFTER"
+#[[dependencies.oc2rcore]]
+#modId = "oc2rvc"
+#mandatory = false
+#versionRange = "[0,)"
+#side = "BOTH"
+#ordering = "AFTER"
+#[[dependencies.oc2rcore]]
+#modId = "oc2rc"
+#mandatory = false
+#versionRange = "[1,)"
+#side = "BOTH"
+#ordering = "AFTER"
+#[[dependencies.oc2rcore]]
+#modId = "oc2rdamos"
+#mandatory = false
+#versionRange = "[1,)"
+#side = "BOTH"
+#ordering = "AFTER"
+#[[dependencies.oc2rcore]]
+#modId = "oc2rpower"
+#mandatory = false
+#versionRange = "[1,)"
+#side = "BOTH"
+#ordering = "AFTER"
+#[[dependencies.oc2rcore]]
+#modId = "oc2rlibrary"
+#mandatory = false
+#versionRange = "[1,)"
+#side = "BOTH"
+#ordering = "AFTER"

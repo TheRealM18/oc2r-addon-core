@@ -86,6 +86,8 @@ dependencies {
 
     // Local libraries
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fg.deobf("curse.maven:oc2rcomponents-1070382:6965986")
+    implementation fg.deobf("curse.maven:oc2r-valkyries-skies-1341233:6966445")
 }
 
 System.setProperty("line.separator", "\n")

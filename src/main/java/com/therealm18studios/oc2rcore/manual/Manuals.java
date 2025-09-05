@@ -1,5 +1,6 @@
 package com.therealm18studios.oc2rcore.manual;
 
+import com.therealm18studios.oc2rcore.OC2RCore;
 import com.therealm18studios.oc2rcore.compat.items.*;
 import dev.architectury.platform.Platform;
 import li.cil.manual.api.ManualModel;
@@ -25,8 +26,8 @@ public final class Manuals {
         TABS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
 
-        if (Platform.isModLoaded(OC2RCItems.MOD_ID)) {
-            TABS.register(OC2RCItems.MOD_ID, () -> new ItemStackTab(
+        if (Platform.isModLoaded("oc2rc")) {
+            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RCItems.MOD_ID + "/index.md",
                 Component.translatable("manual." + OC2RCItems.MOD_ID + ".items"),
                 new ItemStack(OC2RCItems.HARD_DRIVE_EXTRA_LARGE.getItem())));
@@ -34,8 +35,8 @@ public final class Manuals {
 
 
         // OC2R Power Components
-        if (Platform.isModLoaded(OC2RPowerItems.MOD_ID)) {
-            TABS.register(OC2RPowerItems.MOD_ID, () -> new ItemStackTab(
+        if (Platform.isModLoaded("oc2rpower")) {
+            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RPowerItems.MOD_ID + "/index.md",
                 Component.translatable("manual." + OC2RPowerItems.MOD_ID + ".items"),
                 new ItemStack(OC2RCItems.HARD_DRIVE_EXTRA_LARGE.getItem())));
@@ -43,8 +44,8 @@ public final class Manuals {
 
 
         // OC2R Library Functions
-        if (Platform.isModLoaded(OC2RLibraryItems.MOD_ID)) {
-            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
+        if (Platform.isModLoaded("oc2rlibrary")) {
+            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-functions/index.md",
                 Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-functions.items"),
                 new ItemStack(Items.BOOK)));
@@ -52,8 +53,8 @@ public final class Manuals {
 
 
         // OC2R Library Programming
-        if (Platform.isModLoaded(OC2RLibraryItems.MOD_ID)) {
-            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
+        if (Platform.isModLoaded("oc2rlibrary")) {
+            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-programming/index.md",
                 Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-programming.items"),
                 new ItemStack(Items.BOOK)));
@@ -61,8 +62,8 @@ public final class Manuals {
 
 
         // OC2R Library Tutorial
-        if (Platform.isModLoaded(OC2RLibraryItems.MOD_ID)) {
-            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
+        if (Platform.isModLoaded("oc2rlibrary")) {
+            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-tutorial/index.md",
                 Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-tutorial.items"),
                 new ItemStack(Items.BOOK)));
@@ -70,8 +71,8 @@ public final class Manuals {
 
 
         // OC2R Valkyrie Skies
-        if (Platform.isModLoaded(OC2RVSItems.MOD_ID)) {
-            TABS.register(OC2RVSItems.MOD_ID, () -> new ItemStackTab(
+        if (Platform.isModLoaded("oc2rvs")) {
+            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RVSItems.MOD_ID + "/index.md",
                 Component.translatable("manual." + OC2RVSItems.MOD_ID + ".items"),
                 new ItemStack(OC2RVSItems.SHIP_OPERATIONS_MODULE.getItem())));

@@ -167,7 +167,7 @@ jar {
 }
 
 publish {
-    dependsOn(tasks.modrinth)
+//    dependsOn(tasks.modrinth)
     dependsOn(tasks.curseforge)
 }
 
@@ -181,27 +181,26 @@ static def getCurseforgeSDKValue(minecraft_sdk) {
     }
 }
 
+curseforge {
+    apiKey = System.getenv("CURSEFORGE_API_KEY") ?: ""
 
-//curseforge {
-//    apiKey = System.getenv("CURSEFORGE_API_KEY") ?: ""
-//
-//    project {
-//        id = curse_project_id
-//        releaseType = System.getenv('RELEASE_TYPE') ?: "alpha"
-//        changelogType = 'markdown'
-//        changelog = System.getenv("CHANGELOG") ?: "Changelog not available."
-//        addGameVersion getCurseforgeSDKValue(minecraft_sdk)
-//        addGameVersion minecraft_version
-//        addGameVersion "Java 17"
-//        mainArtifact "build/libs/oc2rcore-${minecraft_version}-${minecraft_sdk}-${version}.jar"
-//        relations {
-//            requiredDependency "architectury-api"
-//            requiredDependency "markdownmanual"
-//            requiredDependency "oc2r"
-//        }
-//    }
-//}
-//
+    project {
+        id = curse_project_id
+        releaseType = System.getenv('RELEASE_TYPE') ?: "alpha"
+        changelogType = 'markdown'
+        changelog = System.getenv("CHANGELOG") ?: "Changelog not available."
+        addGameVersion getCurseforgeSDKValue(minecraft_sdk)
+        addGameVersion minecraft_version
+        addGameVersion "Java 17"
+        mainArtifact "build/libs/oc2rcore-${minecraft_version}-${minecraft_sdk}-${version}.jar"
+        relations {
+            requiredDependency "architectury-api"
+            requiredDependency "markdownmanual"
+            requiredDependency "oc2r"
+        }
+    }
+}
+
 //modrinth {
 //    token = System.getenv("MODRINTH_TOKEN")
 //    projectId = modrinth_project_id

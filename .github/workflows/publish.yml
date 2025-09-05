@@ -32,12 +32,12 @@ jobs:
         run: |
           chmod +x gradlew
       - name: Publish to Curseforge & Modrinth
-        run: ./gradlew -Psemver='${{ github.event.release.tag_name }}' build
-#        env:
+        run: ./gradlew -Psemver='${{ github.event.release.tag_name }}' publish
+        env:
 #          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
-#          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
-#          RELEASE_TYPE: ${{ env.RELEASE_TYPE }}
-#          CHANGELOG: ${{ github.event.release.body }}
+          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+          RELEASE_TYPE: ${{ env.RELEASE_TYPE }}
+          CHANGELOG: ${{ github.event.release.body }}
 
       - name: Add Artifacts to Github Release
         uses: alexellis/upload-assets@0.4.1

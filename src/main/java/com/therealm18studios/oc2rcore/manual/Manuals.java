@@ -20,11 +20,15 @@ public final class Manuals {
 
     private static final DeferredRegister<Tab> TABS = DeferredRegister.create(Constants.TAB_REGISTRY, Constants.MOD_ID);
 
-    /// ////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////
 
     public static void initialize() {
         TABS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
+//        TABS.register("oc2rc", () -> new ItemStackTab(
+//            ManualModel.LANGUAGE_KEY + "/oc2rc/index.md",
+//            Component.translatable("manual." + OC2RC.MOD_ID + ".items"),
+//            new ItemStack(Items.HARD_DRIVE_EXTRA_LARGE.get())));
 
         if (Platform.isModLoaded("oc2rc")) {
             TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
@@ -34,18 +38,18 @@ public final class Manuals {
         }
 
 
-        // OC2R Power Components
-        if (Platform.isModLoaded("oc2rpower")) {
-            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
-                ManualModel.LANGUAGE_KEY + "/" + OC2RPowerItems.MOD_ID + "/index.md",
-                Component.translatable("manual." + OC2RPowerItems.MOD_ID + ".items"),
-                new ItemStack(OC2RCItems.HARD_DRIVE_EXTRA_LARGE.getItem())));
-        }
+//        // OC2R Power Components
+//        if (Platform.isModLoaded("oc2rpower")) {
+//            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
+//                ManualModel.LANGUAGE_KEY + "/" + OC2RPowerItems.MOD_ID + "/index.md",
+//                Component.translatable("manual." + OC2RPowerItems.MOD_ID + ".items"),
+//                new ItemStack(OC2RCItems.HARD_DRIVE_EXTRA_LARGE.getItem())));
+//        }
 
 
         // OC2R Library Functions
         if (Platform.isModLoaded("oc2rlibrary")) {
-            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
+            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-functions/index.md",
                 Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-functions.items"),
                 new ItemStack(Items.BOOK)));
@@ -54,7 +58,7 @@ public final class Manuals {
 
         // OC2R Library Programming
         if (Platform.isModLoaded("oc2rlibrary")) {
-            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
+            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-programming/index.md",
                 Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-programming.items"),
                 new ItemStack(Items.BOOK)));
@@ -63,7 +67,7 @@ public final class Manuals {
 
         // OC2R Library Tutorial
         if (Platform.isModLoaded("oc2rlibrary")) {
-            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
+            TABS.register(OC2RLibraryItems.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RLibraryItems.MOD_ID + "-tutorial/index.md",
                 Component.translatable("manual." + OC2RLibraryItems.MOD_ID + "-tutorial.items"),
                 new ItemStack(Items.BOOK)));
@@ -72,7 +76,7 @@ public final class Manuals {
 
         // OC2R Valkyrie Skies
         if (Platform.isModLoaded("oc2rvs")) {
-            TABS.register(OC2RCore.MOD_ID, () -> new ItemStackTab(
+            TABS.register(OC2RVSItems.MOD_ID, () -> new ItemStackTab(
                 ManualModel.LANGUAGE_KEY + "/" + OC2RVSItems.MOD_ID + "/index.md",
                 Component.translatable("manual." + OC2RVSItems.MOD_ID + ".items"),
                 new ItemStack(OC2RVSItems.SHIP_OPERATIONS_MODULE.getItem())));

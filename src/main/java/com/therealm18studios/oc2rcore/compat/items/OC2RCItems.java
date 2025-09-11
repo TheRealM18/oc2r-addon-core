@@ -48,4 +48,14 @@ public class OC2RCItems {
     // Floppy
     public static final ItemStack FLOPPY_DISK = new ItemStack(Items.FLOPPY.get());
     public static final ItemStack MODERN_FLOPPY_DISK = new ItemStack(Items.FLOPPY_MODERN.get());
+    // Hard Drives
+    public static final ItemStack FLASH_MEMORY_SMALL = new ItemStack(Items.FLASH_MEMORY_SMALL.get());
+    public static final ItemStack FLASH_MEMORY_MEDIUM = new ItemStack(Items.FLASH_MEMORY_MEDIUM.get());
+    public static final ItemStack FLASH_MEMORY_LARGE = new ItemStack(Items.FLASH_MEMORY_LARGE.get());
+    public static final ItemStack FLASH_MEMORY_EXTRA_LARGE = new ItemStack(Items.FLASH_MEMORY_EXTRA_LARGE.get());
+//    public static final ItemStack HARD_DRIVE_HUGE = new ItemStack(Items.HARD_DRIVE_HUGE.get());
+//    public static final ItemStack HARD_DRIVE_HYPER = new ItemStack(Items.HARD_DRIVE_HYPER.get());
+//    public static final ItemStack HARD_DRIVE_GIANT = new ItemStack(Items.HARD_DRIVE_GIANT.get());
+//    public static final ItemStack HARD_DRIVE_GARGANTUAN = new ItemStack(Items.HARD_DRIVE_GARGANTUAN.get());
+//    public static final ItemStack HARD_DRIVE_MONOLITHIC = new ItemStack(Items.HARD_DRIVE_MONOLITHIC.get());
 }

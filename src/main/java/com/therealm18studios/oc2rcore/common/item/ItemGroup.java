@@ -48,30 +48,29 @@ public final class ItemGroup {
                 // Floppy Disks
                 output.accept(OC2RCItems.FLOPPY_DISK);
                 output.accept(OC2RCItems.MODERN_FLOPPY_DISK);
+
+                // Flash Drive Items
+                output.accept(OC2RCItems.FLASH_MEMORY_SMALL);
+                output.accept(OC2RCItems.FLASH_MEMORY_MEDIUM);
+                output.accept(OC2RCItems.FLASH_MEMORY_LARGE);
+                output.accept(OC2RCItems.FLASH_MEMORY_EXTRA_LARGE);
             }
 
-            // OC2R Batteries
-            if (Platform.isModLoaded("oc2rpower")) {
-
-                // Battery Items
-                output.accept(OC2RPowerItems.BATTERY_SMALL);
-                output.accept(OC2RPowerItems.BATTERY_MEDIUM);
-                output.accept(OC2RPowerItems.BATTERY_LARGE);
-                output.accept(OC2RPowerItems.BATTERY_EXTRA_LARGE);
-            }
+//            // OC2R Batteries
+//            if (Platform.isModLoaded("oc2rpower")) {
+//
+//                // Battery Items
+//                output.accept(OC2RPowerItems.BATTERY_SMALL);
+//                output.accept(OC2RPowerItems.BATTERY_MEDIUM);
+//                output.accept(OC2RPowerItems.BATTERY_LARGE);
+//                output.accept(OC2RPowerItems.BATTERY_EXTRA_LARGE);
+//            }
 
             // OC2R Valkyrie Skies
             if (Platform.isModLoaded("oc2rvs")) {
 
                 // Circuit Items
                 output.accept(OC2RVSItems.SHIP_OPERATIONS_MODULE);
-            }
-
-            // OC2R DamOS Item
-            if (Platform.isModLoaded("oc2rdamos")) {
-
-                // OS Item
-                output.accept(OC2RDamOSItems.DAMOS);
             }
         })
         .build()

@@ -87,7 +87,12 @@ dependencies {
     // Local libraries
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation fg.deobf("curse.maven:oc2rcomponents-1070382:6965986")
-    implementation fg.deobf("curse.maven:oc2r-valkyries-skies-1341233:6966445")
+    implementation fg.deobf("curse.maven:oc2r-valkyries-skies-1341233:6970882")
+    implementation fg.deobf("curse.maven:oc2r-library-1187789:6966616")
+    implementation fg.deobf("curse.maven:valkyrien-skies-258371:6971390")
+    implementation fg.deobf("curse.maven:kotlin-for-forge-351264:5402061")
+    implementation fg.deobf("curse.maven:cloth-config-348521:5729105")
+
 }
 
 System.setProperty("line.separator", "\n")
@@ -169,7 +174,7 @@ jar {
 }
 
 publish {
-//    dependsOn(tasks.modrinth)
+    dependsOn(tasks.modrinth)
     dependsOn(tasks.curseforge)
 }
 
@@ -203,20 +208,20 @@ curseforge {
     }
 }
 
-//modrinth {
-//    token = System.getenv("MODRINTH_TOKEN")
-//    projectId = modrinth_project_id
-//    versionType = System.getenv('RELEASE_TYPE') ?: "alpha"
-//    uploadFile = "build/libs/oc2r-addon-core-${minecraft_version}-${minecraft_sdk}-${version}-all.jar"
-//    gameVersions = [minecraft_version]
-//    loaders = [minecraft_sdk]
-//    changelog = System.getenv("CHANGELOG") ?: "Changelog not available."
-//    dependencies {
-//        required.project "architectury-api"
-//        required.project "markdownmanual"
-//        required.project "oc2r"
-//    }
-//}
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = modrinth_project_id
+    versionType = System.getenv('RELEASE_TYPE') ?: "alpha"
+    uploadFile = "build/libs/oc2r-addon-core-${minecraft_version}-${minecraft_sdk}-${version}-all.jar"
+    gameVersions = [minecraft_version]
+    loaders = [minecraft_sdk]
+    changelog = System.getenv("CHANGELOG") ?: "Changelog not available."
+    dependencies {
+        required.project "architectury-api"
+        required.project "markdownmanual"
+        required.project "oc2r"
+    }
+}
 
 idea {
     module {
